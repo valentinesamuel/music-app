@@ -8,11 +8,24 @@
   justify-content: space-evenly;
 
   .logo {
-    h1 {
+    display: flex;
+    justify-content: center;
+
+    p {
       color: styles.$light-color;
     }
   }
+
   img {
-    width: 90%;
+    width: 80%;
+  }
+
+  a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: styles.$light-color;
+    background-color: styles.$green-color;
+    padding: 20px;
+    border-radius: 50px;
   }
 }
