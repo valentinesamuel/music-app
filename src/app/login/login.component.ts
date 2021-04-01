@@ -11,13 +11,10 @@ export class LoginComponent implements OnInit {
   token: any
   
   ngOnInit() {
-   
+   this.address = this.spotify.authorize();
   }
   constructor(private spotify: SpotifyService) { }
   
-  auther(){
-    this.address = this.spotify.authorize();
-  }
   set() {
     this.spotify.getAnArtist().subscribe((data) => {
       console.log(data);

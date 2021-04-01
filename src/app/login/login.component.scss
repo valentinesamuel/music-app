@@ -1,6 +1,7 @@
 @use '../../styles.scss';
 
 .main {
+  background-color: black;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -17,11 +18,11 @@
   }
 
   img {
-    width: 80%;
+    width: 70%;
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: styles.$light-color;
     background-color: styles.$green-color;

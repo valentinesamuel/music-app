@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
     this.route.fragment.subscribe((d) => {
       if (d) {
         this.token=this.spotifyServ.getToken();
-        let te
-        te= typeof this.route.fragment
-        console.log(te);
+        // let te
+        // te= typeof this.route.fragment
+        // console.log(te);
         
       }else{
         this.token
