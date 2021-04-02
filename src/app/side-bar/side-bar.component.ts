@@ -21,7 +21,6 @@ export class SideBarComponent implements OnInit {
   homeActive = true;
   libraryActive = true;
   playlistData
-  playlistNames
   constructor(private spotifyServ: SpotifyService) { }
 
   ngOnInit(): void {
