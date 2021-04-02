@@ -50,5 +50,12 @@ export class SpotifyService {
     })
   }
 
+browseCategories(){
+  return this.http.get('https://api.spotify.com/v1/browse/categories', {
+    headers: new HttpHeaders(
+      { 'Authorization': `Bearer ${this.requestToken}` }
+    )
+  })
+}
 }
 
