@@ -1,6 +1,40 @@
 <div class="side-bar">
-      <!-- <div class="home">
-            <fa-icon [icon]="faHome"></fa-icon>
-      </div> -->
-      <h1>This is the side bar</h1>
+  <img
+    class="logo"
+    src="https://logodownload.org/wp-content/uploads/2016/09/spotify-logo-branca-white.png"
+    alt="spotify-logo"
+  />
+
+  <ul class="menu">
+    <li
+      class="nav-link"
+        (click)="goHome()"
+     [ngClass]="homeActive ? 'nav-link' : 'nav-link-active'"
+    >
+      <fa-icon [icon]="faHome"></fa-icon> Home
+    </li>
+    <li
+      class="nav-link"
+      (click)="goToSearch()"
+      [ngClass]="searchActive ? 'nav-link' : 'nav-link-active'"
+    >
+      <fa-icon [icon]="faSearch"></fa-icon> Search
+    </li>
+    <li
+      class="nav-link"
+      (click)="goToLibrary()"
+      [ngClass]="libraryActive ? 'nav-link' : 'nav-link-active'"
+    >
+      <fa-icon [icon]="faBookReader"></fa-icon> Your Library
+    </li>
+  </ul>
+
+  <ul class="playlist-menu">
+        <li class="options">
+           <fa-icon [icon]="faPlusSquare"></fa-icon>   Create a Playlist
+        </li>
+        <li class="options">
+           <fa-icon [icon]="faHeart"></fa-icon>   Create a Playlist
+        </li>
+  </ul>
 </div>
