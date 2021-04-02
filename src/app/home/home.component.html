@@ -1,1 +1,11 @@
-<p>home works!</p>
+<h3>Browse Categories</h3>
+
+<div class="row">
+  <div class="card" *ngFor="let item of categoriesData">
+    <div class="image">
+      <!-- <img  [src]="item.icon.url" /> -->
+    </div>
+    <a [href]="item.href">{{item.id}}</a>
+    <p>{{ item.name }}</p>
+  </div>
+</div>

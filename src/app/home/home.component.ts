@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SpotifyService } from '../services/spotify.service';
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  faplay = faPlay
+  categoriesData
+  constructor(private spotifyServ: SpotifyService, private router: Router) { }
 
   ngOnInit(): void {
+    this.spotifyServ.browseCategories().subscribe((categories) => {
+      this.categoriesData = categories;
+      this.categoriesData = this.categoriesData.categories.items;
+      console.log(this.categoriesData);
+    })
   }
 
 }

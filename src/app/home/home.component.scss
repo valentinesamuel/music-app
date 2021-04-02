@@ -1,0 +1,47 @@
+@use '../../styles.scss';
+
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h3{
+  font-size: 2em;
+}
+
+  .card {
+    height: auto;
+    background-color: styles.$dark-color;
+    padding: 16px;
+    width: 185px;
+    border-radius: 2px;
+    color: styles.$white-color;
+
+    &:hover {
+     background-color: #333333;
+    }
+
+    img {
+      border-radius: 2px;
+      min-height: 153px;
+      object-fit: cover;
+      width: 153px;
+      margin-bottom: 24px;
+    }
+
+    a {
+      font-size: 18px;
+      margin-bottom: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      color: styles.$white-color;
+    }
+
+    p {
+      margin-top: 7px;
+      font-size: 14px;
+      color: styles.$light-color;
+    }
+  }
+  
