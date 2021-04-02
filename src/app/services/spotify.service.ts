@@ -11,7 +11,7 @@ export class SpotifyService {
   redirectUri = 'http://localhost:4200/';
   clientId = 'cde2240dafeb489e8b0cddabdf3a8844';
   finalUrl: any;
-  
+
   requestToken: any;
   scopes = [
     'user-read-currently-playing',
@@ -30,7 +30,7 @@ export class SpotifyService {
 
   getToken() {
     return this.route.fragment.subscribe((fragment: string) => {
-      this.requestToken = fragment.substring(0, fragment.indexOf("&")).split("=").pop();     
+      this.requestToken = fragment.substring(0, fragment.indexOf("&")).split("=").pop();
     })
   }
 
