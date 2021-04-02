@@ -30,8 +30,12 @@ export class SpotifyService {
 
   getToken() {
     return this.route.fragment.subscribe((fragment: string) => {
-      this.requestToken = fragment.substring(0, fragment.indexOf("&")).split("=").pop();
-    })
+      try {
+        this.requestToken = fragment.substring(0, fragment.indexOf("&")).split("=").pop();
+      } catch (error) {      
+      }
+    }, );
+    
   }
 
   getTheUser() {
@@ -50,12 +54,12 @@ export class SpotifyService {
     })
   }
 
-browseCategories(){
-  return this.http.get('https://api.spotify.com/v1/browse/categories', {
-    headers: new HttpHeaders(
-      { 'Authorization': `Bearer ${this.requestToken}` }
-    )
-  })
-}
+  browseCategories() {
+    return this.http.get('https://api.spotify.com/v1/browse/categories', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
+  }
 }
 

@@ -5,6 +5,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBookReader } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -22,9 +23,10 @@ export class SideBarComponent implements OnInit {
   libraryActive = true;
   playlistData
   categoriesData
-  constructor(private spotifyServ: SpotifyService) { }
+  constructor(private spotifyServ: SpotifyService, private router:Router) { }
 
   ngOnInit(): void {
+    this.router.navigate([''])
     // this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
     //   this.playlistData = playlist
     //   this.playlistData = this.playlistData.items
