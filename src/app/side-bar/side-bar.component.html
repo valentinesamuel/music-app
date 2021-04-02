@@ -8,8 +8,8 @@
   <ul class="menu">
     <li
       class="nav-link"
-        (click)="goHome()"
-     [ngClass]="homeActive ? 'nav-link' : 'nav-link-active'"
+      (click)="goHome()"
+      [ngClass]="homeActive ? 'nav-link' : 'nav-link-active'"
     >
       <fa-icon [icon]="faHome"></fa-icon> Home
     </li>
@@ -30,13 +30,17 @@
   </ul>
 
   <ul class="playlist-menu">
-        <li class="options">
-           <fa-icon [icon]="faPlusSquare"></fa-icon>   Create a Playlist
-        </li>
-        <li class="options">
-           <fa-icon [icon]="faHeart"></fa-icon>   Create a Playlist
-        </li>
+    <li class="options">
+      <fa-icon [icon]="faPlusSquare"></fa-icon> Create a Playlist
+    </li>
+    <li class="options">
+      <fa-icon [icon]="faHeart"></fa-icon> Create a Playlist
+    </li>
   </ul>
 
-<hr>
+  <hr />
+
+  <ul class="playlist" *ngFor="let playlist of playlistData">
+    <li class="playlist-title">{{ playlist.name }}</li>
+  </ul>
 </div>

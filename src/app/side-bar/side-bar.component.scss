@@ -5,6 +5,7 @@
   min-width: 230px;
   max-width: 208px;
   padding-top: 24px;
+  overflow-y: overlay;
 
   .logo {
     margin: auto 0;
@@ -28,12 +29,11 @@
       padding: 12px 6px;
       &:hover {
         color: styles.$white-color;
-        font-weight: bold;
       }
     }
 
     .nav-link-active {
-      background-color: red;
+      background-color: styles.$dark-color;
       font-size: 1.2rem;
       margin: 1px 16px;
       border-radius: 5px;
@@ -49,6 +49,7 @@
   .playlist-menu {
     color: styles.$light-color;
     list-style-type: none;
+    margin-bottom: 10px;
 
     .options {
       fa-icon {
@@ -68,10 +69,26 @@
   }
 
   hr {
-    width: 90%;
+    width: 80%;
     background-color: styles.$dark-color;
     margin: 0 auto;
     height: 1px;
-    margin: 10px;
+    border: none;
+  }
+
+  .playlist {
+    margin-top: 20px;
+    color: styles.$light-color;
+    list-style-type: none;
+
+    .playlist-title {
+      font-size: 1rem;
+      margin: 1px 16px;
+      padding: 6px 6px;
+
+      &:hover {
+        color: styles.$white-color;
+      }
+    }
   }
 }

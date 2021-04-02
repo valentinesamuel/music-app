@@ -20,18 +20,21 @@ export class SideBarComponent implements OnInit {
   searchActive = true;
   homeActive = true;
   libraryActive = true;
+  playlistData
+  playlistNames
   constructor(private spotifyServ: SpotifyService) { }
 
   ngOnInit(): void {
-    // this.spotifyServ.getAnArtist().subscribe((user) => {
-    //   console.log('🤶🤶', user);
+    this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
+    this.playlistData = playlist
+    this.playlistData=this.playlistData.items
+    })
 
-    // });
   }
-  goHome(){
+  goHome() {
     this.homeActive = !this.homeActive;
     console.log(this.homeActive);
-    
+
     setTimeout(() => {
       this.homeActive = !this.homeActive;
     }, 1000);

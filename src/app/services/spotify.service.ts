@@ -34,12 +34,21 @@ export class SpotifyService {
     })
   }
 
-  getAnArtist() {
+  getTheUser() {
     return this.http.get('https://api.spotify.com/v1/me', {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
       )
     })
   }
+
+  getUserPlaylist() {
+    return this.http.get('https://api.spotify.com/v1/me/playlists', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
+  }
+
 }
 

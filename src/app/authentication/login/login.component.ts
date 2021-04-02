@@ -15,9 +15,5 @@ export class LoginComponent implements OnInit {
   }
   constructor(private spotify: SpotifyService) { }
   
-  set() {
-    this.spotify.getAnArtist().subscribe((data) => {
-      console.log(data);
-    });
-  }
+
 }
