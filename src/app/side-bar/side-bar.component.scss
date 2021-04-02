@@ -26,9 +26,9 @@
       margin: 1px 16px;
       border-radius: 5px;
       padding: 12px 6px;
-      &:hover{
-            color: styles.$white-color;
-            font-weight: bold;
+      &:hover {
+        color: styles.$white-color;
+        font-weight: bold;
       }
     }
 
@@ -61,9 +61,17 @@
       padding: 6px 6px;
       display: flex;
       align-items: center;
-      &:hover{
-            color: styles.$white-color;
+      &:hover {
+        color: styles.$white-color;
       }
     }
+  }
+
+  hr {
+    width: 90%;
+    background-color: styles.$dark-color;
+    margin: 0 auto;
+    height: 1px;
+    margin: 10px;
   }
 }
