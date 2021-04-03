@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     this.spotifyServ.browseCategories().subscribe((categories) => {
       this.categoriesData = categories;
       this.categoriesData= this.categoriesData.categories.items
-      console.log(this.categoriesData);
       
    })
   }
