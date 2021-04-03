@@ -1,50 +1,49 @@
 <div class="wrapper">
   <div class="side-bar">
     <img
-    class="logo"
-    src="https://logodownload.org/wp-content/uploads/2016/09/spotify-logo-branca-white.png"
-    alt="spotify-logo"
-  />
+      class="logo"
+      src="https://logodownload.org/wp-content/uploads/2016/09/spotify-logo-branca-white.png"
+      alt="spotify-logo"
+    />
 
-  <ul class="menu">
-    <li
-      class="nav-link"
-      (click)="goHome()"
-      [ngClass]="homeActive ? 'nav-link' : 'nav-link-active'"
-    >
-      <fa-icon [icon]="faHome"></fa-icon> Home
-    </li>
-    <li
-      class="nav-link"
-      (click)="goToSearch()"
-      [ngClass]="searchActive ? 'nav-link' : 'nav-link-active'"
-    >
-      <fa-icon [icon]="faSearch"></fa-icon> Search
-    </li>
-    <li
-      class="nav-link"
-      (click)="goToLibrary()"
-      [ngClass]="libraryActive ? 'nav-link' : 'nav-link-active'"
-    >
-      <fa-icon [icon]="faBookReader"></fa-icon> Your Library
-    </li>
-  </ul>
+    <ul class="menu">
+      <li
+        class="nav-link"
+        (click)="goHome()"
+        [ngClass]="homeActive ? 'nav-link' : 'nav-link-active'"
+      >
+        <fa-icon [icon]="faHome"></fa-icon> Home
+      </li>
+      <li
+        class="nav-link"
+        (click)="goToSearch()"
+        [ngClass]="searchActive ? 'nav-link' : 'nav-link-active'"
+      >
+        <fa-icon [icon]="faSearch"></fa-icon> Search
+      </li>
+      <li
+        class="nav-link"
+        (click)="goToLibrary()"
+        [ngClass]="libraryActive ? 'nav-link' : 'nav-link-active'"
+      >
+        <fa-icon [icon]="faBookReader"></fa-icon> Your Library
+      </li>
+    </ul>
 
-  <ul class="playlist-menu">
-    <li class="options">
-      <fa-icon [icon]="faPlusSquare"></fa-icon> Create a Playlist
-    </li>
-    <li class="options">
-      <fa-icon [icon]="faHeart"></fa-icon> Liked Songs
-    </li>
-  </ul>
+    <ul class="playlist-menu">
+      <li class="options">
+        <fa-icon [icon]="faPlusSquare"></fa-icon> Create a Playlist
+      </li>
+      <li class="options"><fa-icon [icon]="faHeart"></fa-icon> Liked Songs</li>
+    </ul>
 
-  <hr />
+    <hr />
 
-  <ul class="playlist" *ngFor="let playlist of playlistData">
-    <li class="playlist-title">{{ playlist.name }}</li>
-  </ul>
+    <div class="playlist-section">
+      <ul class="playlist" *ngFor="let playlist of playlistData">
+        <li class="playlist-title">{{ playlist.name }}</li>
+      </ul>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<router-outlet></router-outlet>
-</div>
-

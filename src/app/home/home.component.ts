@@ -27,5 +27,5 @@ export class HomeComponent implements OnInit {
       this.topArtistData= this.topArtistData.items
     })
   }
-
+  
 }

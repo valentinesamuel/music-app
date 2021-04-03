@@ -1,11 +1,9 @@
 @use '../../styles.scss';
 .side-bar {
   background-color: styles.$black-color;
-  max-height: 100%;
   min-width: 230px;
   max-width: 208px;
   padding-top: 24px;
-  
 
   .logo {
     margin: auto 0;
@@ -76,26 +74,35 @@
     border: none;
   }
 
-  .playlist {
-    margin-top: 20px;
-    color: styles.$light-color;
-    list-style-type: none;
+  .playlist-section {
+    .playlist {
+      margin-top: 20px;
+      color: styles.$light-color;
+      list-style-type: none;
 
-    .playlist-title {
-      font-size: 14px;
-      margin: 1px 16px;
-      padding: 6px 6px;
+      .playlist-title {
+        font-size: 14px;
+        margin: 1px 16px;
+        padding: 6px 6px;
 
-      &:hover {
-        color: styles.$white-color;
+        &:hover {
+          color: styles.$white-color;
+        }
       }
     }
   }
 }
 
 .wrapper {
-  display: flex;
-  overflow: hidden;
-
-
+ grid-template-columns: 230px auto;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    display: grid;
+    height: 100vh;
+    grid-row-gap: 0px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+router-outlet{
+  background-color: rebeccapurple ;
 }
