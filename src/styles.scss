@@ -9,12 +9,12 @@ $black-color: black;
 $dark-color: #282828;
 $green-color: #1db954;
 
-// html ::-webkit-scrollbar {
-//   width: 0;
-//   /* Remove scrollbar space */
-//   background: transparent;
-//   /* Optional: just make scrollbar invisible */
-// }
+html ::-webkit-scrollbar {
+  width: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
 
 * {
   margin: 0;
