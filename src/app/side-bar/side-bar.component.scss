@@ -5,7 +5,7 @@
   min-width: 230px;
   max-width: 208px;
   padding-top: 24px;
-  overflow-y: scroll;
+  overflow: hidden;
 
   .logo {
     margin: auto 0;
@@ -36,7 +36,6 @@
     .nav-link-active {
       @extend .nav-link;
       background-color: styles.$dark-color;
-   
     }
 
     fa-icon {
@@ -63,7 +62,7 @@
       padding: 6px 6px;
       display: flex;
       align-items: center;
-     
+
       &:hover {
         color: styles.$white-color;
       }
@@ -95,6 +94,9 @@
   }
 }
 
-.wrapper{
+.wrapper {
   display: flex;
+  height: 100%;
+  flex-direction: row;
+  overflow: hidden;
 }

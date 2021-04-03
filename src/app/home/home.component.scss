@@ -1,47 +1,51 @@
 @use '../../styles.scss';
 
-.row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-h3{
-  font-size: 2em;
-}
+.row {
+      background-color: rgb(21, 19, 19);
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-rows: 1fr;
+  grid-auto-rows: auto;
+  overflow: auto;
 
   .card {
     height: auto;
     background-color: styles.$dark-color;
-    padding: 16px;
-    width: 185px;
-    border-radius: 2px;
-    color: styles.$white-color;
-
-    &:hover {
-     background-color: #333333;
-    }
-
+    box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+    padding: 10px;
     img {
-      border-radius: 2px;
-      min-height: 153px;
-      object-fit: cover;
-      width: 153px;
-      margin-bottom: 24px;
+      height: auto;
+      width: 100%;
+      object-fit: contain;
     }
-
     a {
-      font-size: 18px;
-      margin-bottom: 17px;
-      font-weight: bold;
       text-decoration: none;
-      color: styles.$white-color;
+      color: styles.$light-color;
+      font-weight: 600;
+      &:hover {
+        color: styles.$white-color;
+      }
+    }
+    p {
+      color: styles.$light-color;
+      margin-top: 10px;
     }
 
-    p {
-      margin-top: 7px;
-      font-size: 14px;
-      color: styles.$light-color;
+    fa-icon {
+      color: white;
+      background-color: styles.$green-color;
+      padding: 10px;
+      border-radius: 500px;
+      position: relative;
+      bottom: -10%;
+      right: -80%;
     }
   }
-  
+}

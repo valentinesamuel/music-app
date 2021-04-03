@@ -9,16 +9,20 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  test
   faplay = faPlay
   categoriesData
+  categoriesImages = []
+
   constructor(private spotifyServ: SpotifyService, private router: Router) { }
 
   ngOnInit(): void {
     this.spotifyServ.browseCategories().subscribe((categories) => {
       this.categoriesData = categories;
-      this.categoriesData = this.categoriesData.categories.items;
+      this.categoriesData= this.categoriesData.categories.items
       console.log(this.categoriesData);
-    })
+      
+   })
   }
 
-}
+  }
