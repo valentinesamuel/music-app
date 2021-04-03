@@ -61,5 +61,21 @@ export class SpotifyService {
       )
     })
   }
+
+  getTopArtists(){
+    return this.http.get('https://api.spotify.com/v1/me/top/artists', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
+  }
+
+  getTopTracks(){
+    return this.http.get('https://api.spotify.com/v1/me/top/tracks', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
+  }
 }
 

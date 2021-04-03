@@ -12,16 +12,20 @@ export class HomeComponent implements OnInit {
   test
   faplay = faPlay
   categoriesData
-  categoriesImages = []
+  topArtistData
 
   constructor(private spotifyServ: SpotifyService, private router: Router) { }
 
   ngOnInit(): void {
     this.spotifyServ.browseCategories().subscribe((categories) => {
       this.categoriesData = categories;
-      this.categoriesData= this.categoriesData.categories.items
-      
-   })
+      this.categoriesData = this.categoriesData.categories.items
+    });
+
+    this.spotifyServ.getTopArtists().subscribe((topArtists) => {
+      this.topArtistData = topArtists;
+      this.topArtistData= this.topArtistData.items
+    })
   }
 
-  }
+}
