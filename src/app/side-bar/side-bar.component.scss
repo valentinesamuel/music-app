@@ -94,15 +94,28 @@
 }
 
 .wrapper {
- grid-template-columns: 230px auto;
-    grid-template-rows: 100%;
-    grid-column-gap: 0px;
-    display: grid;
-    height: 100vh;
-    grid-row-gap: 0px;
-    justify-items: stretch;
-    align-items: stretch;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "sidebar main"
+  "player player";
+  grid-template-columns: 230px 95%;
+  grid-template-rows: 90% 10%;
 }
-router-outlet{
-  background-color: rebeccapurple ;
+.container > div {
+  border: 1px dashed #888;
 }
+
+.sidebar {
+  grid-area: sidebar;
+}
+.main {
+  grid-area: main;
+}
+.footer {
+  grid-area: player;
+  background-color: green;
+}
+// router-outlet{
+//   background-color: rebeccapurple ;
+// }

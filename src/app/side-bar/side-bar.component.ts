@@ -26,6 +26,8 @@ export class SideBarComponent implements OnInit {
   constructor(private spotifyServ: SpotifyService, private router:Router) { }
 
   ngOnInit(): void {
+    this.router.navigate(['/home']);
+
     this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
       this.playlistData = playlist
       this.playlistData = this.playlistData.items
@@ -35,7 +37,6 @@ export class SideBarComponent implements OnInit {
 
   }
   goHome() {
-        this.router.navigate(['/home']);
     this.homeActive = !this.homeActive;
     console.log(this.homeActive);
 
