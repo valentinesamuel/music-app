@@ -99,12 +99,10 @@
   height: 100%;
   grid-template-areas: "sidebar main"
   "player player";
-  grid-template-columns: 230px 95%;
+  grid-template-columns: minmax(230px, 230px) 95%;
   grid-template-rows: 90% 10%;
 }
-.container > div {
-  border: 1px dashed #888;
-}
+
 
 .sidebar {
   grid-area: sidebar;
