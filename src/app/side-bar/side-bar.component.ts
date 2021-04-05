@@ -28,10 +28,10 @@ export class SideBarComponent implements OnInit {
   ngOnInit(): void {
     this.router.navigate(['/home']);
 
-    this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
-      this.playlistData = playlist
-      this.playlistData = this.playlistData.items
-    })
+    // this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
+    //   this.playlistData = playlist
+    //   this.playlistData = this.playlistData.items
+    // })
 
    
 
