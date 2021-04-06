@@ -19,9 +19,10 @@
 
     .nav-link {
       font-size: 14px;
-      margin: 1px 16px;
+      margin: 1px 10px;
       border-radius: 5px;
-      padding: 12px 6px;
+      padding: 6px 6px;
+      font-weight: 700;
 
       &:hover {
         color: styles.$white-color;
@@ -73,10 +74,10 @@
   }
 
   .playlist-section {
-   height: 100vh;
-  overflow-y: scroll;
+    height: 50vh;
+    overflow-y: scroll;
     .playlist {
-      margin-top: 20px;
+      margin-top: 10px;
       color: styles.$light-color;
       list-style-type: none;
 
@@ -103,22 +104,21 @@
   grid-template-areas:
     "sidebar main"
     "player player";
-  grid-template-columns:minmax(230px,230px) auto;
+  grid-template-columns: minmax(230px, 230px) auto;
   grid-template-rows: 90vh 10vh;
 }
 
 .sidebar {
   grid-area: sidebar;
- 
 }
 .main {
   grid-area: main;
-   overflow-y: scroll;
-    background-color: rgb(11, 11, 11);
+  overflow-y: scroll;
+  background-color: rgb(11, 11, 11);
 }
 .footer {
   grid-area: player;
-z-index: 2;
+  z-index: 2;
   height: 100px;
   background-color: green;
 }

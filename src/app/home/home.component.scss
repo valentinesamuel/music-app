@@ -1,41 +1,40 @@
-
-
-.row{
-        display:grid;
+.row {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
-  grid-auto-flow:row;
+  grid-auto-flow: row;
   grid-column-gap: 30px;
-  grid-row-gap:30px;
-  place-items:center;
-  align-content:center;
+  grid-row-gap: 30px;
+  place-items: center;
+  align-content: center;
   justify-content: center;
-.card {
-  background-color: #181818;
-  height:auto;
-  width: 180px;
-  padding:15px;
-  padding-bottom:40px;
-  border-radius: 5px;
-
-  img {
-    height: 153px;
-    width: 153px;
-   object-fit: cover;
+  .card {
+    background-color: #181818;
+    height: auto;
+    width: 180px;
+    padding: 15px;
+    padding-bottom: 40px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
+
+    img {
+      height: 153px;
+      width: 153px;
+      filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.25));
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    a {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    p {
+      font-size: 1rem;
+      color: white;
+      margin-top: 5px;
+    }
   }
-    
-  a{
-    font-weight: bold;
-  font-size: 1.2rem;
-    text-decoration:none;
-    color:white
-  }
-  
-  p{
-    font-size: 1rem;
-    color:white;
-    margin-top: 5px;
-  
-  }
-}
 }
