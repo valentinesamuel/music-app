@@ -10,6 +10,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LibraryComponent } from './components/library/library.component';
 import { AlbumCardComponent } from './ui-elements/album-card/album-card.component';
+import { StringShortnerPipe } from './pipes/string-shortner.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AlbumCardComponent } from './ui-elements/album-card/album-card.componen
     SideBarComponent,
     HomeComponent,
     LibraryComponent,
-    AlbumCardComponent
+    AlbumCardComponent,
+    StringShortnerPipe
   ],
   imports: [
     BrowserModule,

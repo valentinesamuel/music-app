@@ -14,8 +14,6 @@ savedAlbumsData
     this.spotifyServ.getSavedAlbums().subscribe((savedAlbums) => {
       this.savedAlbumsData= savedAlbums
       this.savedAlbumsData= this.savedAlbumsData.items
-      console.log(this.savedAlbumsData);
-
     });
   }
 
