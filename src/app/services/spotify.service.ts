@@ -19,6 +19,7 @@ export class SpotifyService {
     'playlist-modify-public',
     'user-read-playback-state',
     'user-top-read',
+    'user-library-read',
     'playlist-read-private',
     'user-modify-playback-state'];
 
@@ -32,10 +33,10 @@ export class SpotifyService {
     return this.route.fragment.subscribe((fragment: string) => {
       try {
         this.requestToken = fragment.substring(0, fragment.indexOf("&")).split("=").pop();
-      } catch (error) {      
+      } catch (error) {
       }
-    }, );
-    
+    });
+
   }
 
   getTheUser() {
@@ -62,7 +63,7 @@ export class SpotifyService {
     })
   }
 
-  getTopArtists(){
+  getTopArtists() {
     return this.http.get('https://api.spotify.com/v1/me/top/artists', {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
@@ -70,14 +71,15 @@ export class SpotifyService {
     })
   }
 
-  getTopTracks(){
+  getTopTracks() {
     return this.http.get('https://api.spotify.com/v1/me/top/tracks', {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
       )
     })
   }
-  getSavedAlbums(){
+  
+  getSavedAlbums() {
     return this.http.get('https://api.spotify.com/v1/me/albums', {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
