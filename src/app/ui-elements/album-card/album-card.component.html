@@ -1,1 +1,17 @@
-<p>album-card works!</p>
+<div class="artists">
+    <div class="artist-card">
+          <ng-content select="[image]"> 
+      <!-- <img src="artist.url" alt="genre-image" loading="lazy"/> -->
+      </ng-content>
+
+       <ng-content select="[name-link]"> 
+      <!-- <a [href]="artist.href">
+        <p>{{artist.name}}</p>
+      </a> -->
+      </ng-content>
+      
+       <ng-content select="[album-name]"> 
+      <!-- <p>{{artist.album}}</p> -->
+      </ng-content>
+    </div>
+</div>
