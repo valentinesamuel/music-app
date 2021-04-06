@@ -1,4 +1,4 @@
- <div class="categories">
+<div class="categories">
   <h3>Browse Categories</h3>
   <div class="row">
     <div class="card" *ngFor="let data of categoriesData">
@@ -9,14 +9,13 @@
       >
       <p>{{ data.id }}</p>
     </div>
-  </div>
-</div> 
+  </div>  
+</div>
 
 <div class="artists">
-  
   <h3>Top Artists</h3>
   <div class="row">
-    <div class="card" *ngFor="let artist of topArtistData">
+    <div class="artist-card" *ngFor="let artist of topArtistData">
       <img [src]="artist.images[0].url" alt="genre-image" />
 
       <a [href]="artist.href">
@@ -26,4 +25,3 @@
     </div>
   </div>
 </div>
-
