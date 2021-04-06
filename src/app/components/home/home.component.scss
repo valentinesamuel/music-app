@@ -1,6 +1,15 @@
+@use '../../../styles.scss';
 
-   .row{
-           display: grid;
+h3{
+  color: white;
+  margin-left: 30px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  margin-top: 70px;
+}
+
+.row {
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 180px));
   grid-auto-flow: row;
   grid-column-gap: 30px;
@@ -8,9 +17,23 @@
   place-items: center;
   align-content: center;
   justify-content: center;
-   }   
-      .saved-albums {
-       color:white;
+
+    a {
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    p {
+      font-size: 1rem;
+      color: white;
+      margin-top: 5px;
+    }
+  
+}
+
+ .card {
     background-color: #181818;
     height: auto;
     width: 180px;
@@ -26,16 +49,11 @@
       object-fit: cover;
       border-radius: 5px;
     }
+.artist-card{
+@extend  .card;
 
-    a {
-      font-weight: bold;
-      font-size: 1.2rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    p {
-      font-size: 1rem;
-      color: white;
-      margin-top: 5px;
-    }
+img{
+  @extend img;
+  border-radius: 50%;
+}
+}

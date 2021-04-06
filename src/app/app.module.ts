@@ -6,9 +6,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './authentication/login/login.component';
-import { SideBarComponent } from './side-bar/side-bar.component';
-import { HomeComponent } from './home/home.component';
-import { LibraryComponent } from './library/library.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { HomeComponent } from './components/home/home.component';
+import { LibraryComponent } from './components/library/library.component';
+import { AlbumCardComponent } from './ui-elements/album-card/album-card.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LibraryComponent } from './library/library.component';
     LoginComponent,
     SideBarComponent,
     HomeComponent,
-    LibraryComponent
+    LibraryComponent,
+    AlbumCardComponent
   ],
   imports: [
     BrowserModule,

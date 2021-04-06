@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SpotifyService } from '../services/spotify.service';
+import { SpotifyService } from '../../services/spotify.service';
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
