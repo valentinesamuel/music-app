@@ -77,5 +77,14 @@ export class SpotifyService {
       )
     })
   }
+  getSavedAlbums(){
+    return this.http.get('https://api.spotify.com/v1/me/albums', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
+  }
+
+
 }
 
