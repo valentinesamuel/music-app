@@ -46,8 +46,13 @@ a {
 
 p {
   font-size: 1rem;
- 
   overflow: hidden;
   color: white;
   margin-top: 5px;
+}
+.album-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
