@@ -15,6 +15,7 @@ export class SpotifyService {
   requestToken: any;
   scopes = [
     'user-read-currently-playing',
+    'user-read-playback-position',
     'user-read-recently-played',
     'playlist-modify-public',
     'user-read-playback-state',
