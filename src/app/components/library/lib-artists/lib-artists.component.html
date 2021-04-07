@@ -1,0 +1,10 @@
+<h3>Artists</h3>
+<div class="row">  
+  <app-album-card *ngFor="let artist of topArtistData">
+    <img image [src]="artist.images[0].url" alt="artist-image" loading="lazy">
+    <a name-link [href]="artist.href">
+      <p class="album-name">{{artist.name }}</p>
+    </a>
+    <p album-name>{{artist.type | titlecase}}</p>
+  </app-album-card>
+</div>

@@ -1,11 +1,6 @@
-
-<h3>Top Artists</h3>
-<div class="row">  
-  <app-album-card *ngFor="let album of savedAlbumsData">
-    <img image [src]="album.album.images[0].url" alt="album-image" loading="lazy">
-    <a name-link [href]="album.href">
-      <p class="album-name">{{album.album.name }}</p>
-    </a>
-    <p album-name>{{album.album.artists[0].name}}</p>
-  </app-album-card>
-</div>
+<ul>
+  <li>podcast</li>
+  <li>artist - Done</li>
+  <li>album - Done</li>
+</ul>
+<router-outlet></router-outlet>

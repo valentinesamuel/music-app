@@ -11,6 +11,9 @@ import { HomeComponent } from './components/home/home.component';
 import { LibraryComponent } from './components/library/library.component';
 import { AlbumCardComponent } from './ui-elements/album-card/album-card.component';
 import { StringShortnerPipe } from './pipes/string-shortner.pipe';
+import { LibArtistsComponent } from './components/library/lib-artists/lib-artists.component';
+import { LibPodcastsComponent } from './components/library/lib-podcasts/lib-podcasts.component';
+import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { StringShortnerPipe } from './pipes/string-shortner.pipe';
     HomeComponent,
     LibraryComponent,
     AlbumCardComponent,
-    StringShortnerPipe
+    StringShortnerPipe,
+    LibArtistsComponent,
+    LibPodcastsComponent,
+    LibAlbumsComponent
   ],
   imports: [
     BrowserModule,

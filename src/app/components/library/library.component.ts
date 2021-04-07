@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyService } from '../../services/spotify.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-library',
@@ -7,14 +8,11 @@ import { SpotifyService } from '../../services/spotify.service';
   styleUrls: ['./library.component.scss']
 })
 export class LibraryComponent implements OnInit {
-savedAlbumsData
-  constructor(private spotifyServ:SpotifyService) { }
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.spotifyServ.getSavedAlbums().subscribe((savedAlbums) => {
-      this.savedAlbumsData= savedAlbums
-      this.savedAlbumsData= this.savedAlbumsData.items
-    });
+    this.router.navigate(['podcasts'], { relativeTo: this.route })
   }
 
 }
