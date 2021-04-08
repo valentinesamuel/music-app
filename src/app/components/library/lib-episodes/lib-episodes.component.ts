@@ -11,10 +11,8 @@ episodesData
   constructor(private spotifyServ: SpotifyService) { }
 
   ngOnInit(): void {
-this.spotifyServ.getEpisodes().subscribe((episodes)=>{
-  console.log(episodes);
+
   
-})
   }
 
 }
