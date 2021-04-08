@@ -1,1 +1,15 @@
-<p>lib-shows works!</p>
+<h3>Shows</h3>
+<div class="row">
+  <app-album-card *ngFor="let shows of showsData">
+    <img
+      image
+      [src]="shows.show.images[0].url"
+      alt="album-image"
+      loading="lazy"
+    /> 
+    <a name-link [href]="shows.show.href">
+      <p class="show-name">{{ shows.show.name }}</p>
+    </a>
+    <p album-name class="show-publisher">{{ shows.show.publisher }}</p>
+  </app-album-card>
+</div>

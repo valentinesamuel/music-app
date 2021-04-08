@@ -7,13 +7,13 @@ import { SpotifyService } from 'src/app/services/spotify.service';
   styleUrls: ['./lib-shows.component.scss']
 })
 export class LibShowsComponent implements OnInit {
-
-  constructor(private spotifyServ:SpotifyService) { }
+  showsData
+  constructor(private spotifyServ: SpotifyService) { }
 
   ngOnInit(): void {
-    this.spotifyServ.getShows().subscribe((shows)=>{
-      console.log(shows);
-      
+    this.spotifyServ.getShows().subscribe((shows) => {
+      this.showsData = shows
+      this.showsData = this.showsData.items
     })
   }
 
