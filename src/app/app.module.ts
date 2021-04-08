@@ -13,6 +13,8 @@ import { AlbumCardComponent } from './ui-elements/album-card/album-card.componen
 import { StringShortnerPipe } from './pipes/string-shortner.pipe';
 import { LibArtistsComponent } from './components/library/lib-artists/lib-artists.component';
 import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
+import { LibShowsComponent } from './components/library/lib-shows/lib-shows.component';
+import { LibEpisodesComponent } from './components/library/lib-episodes/lib-episodes.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.c
     AlbumCardComponent,
     StringShortnerPipe,
     LibArtistsComponent,
-    LibAlbumsComponent
+    LibAlbumsComponent,
+    LibShowsComponent,
+    LibEpisodesComponent
   ],
   imports: [
     BrowserModule,

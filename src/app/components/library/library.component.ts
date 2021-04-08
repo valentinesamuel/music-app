@@ -12,7 +12,7 @@ export class LibraryComponent implements OnInit {
   constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.router.navigate(['artists'], { relativeTo: this.route })
+    this.router.navigate(['shows'], { relativeTo: this.route })
   }
 
 }
