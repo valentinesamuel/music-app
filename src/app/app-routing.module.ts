@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 import { LibArtistsComponent } from './components/library/lib-artists/lib-artists.component';
 import { LibraryComponent } from './components/library/library.component';
 import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
-import { LibPodcastsComponent } from './components/library/lib-podcasts/lib-podcasts.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,7 +11,6 @@ const routes: Routes = [
     path: 'library', component: LibraryComponent,
     children: [
       { path: 'artists', component: LibArtistsComponent },
-      { path: 'podcasts', component: LibPodcastsComponent },
       { path: 'albums', component: LibAlbumsComponent },
     ]
   }

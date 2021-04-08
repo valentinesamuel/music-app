@@ -28,10 +28,10 @@ export class SideBarComponent implements OnInit {
   ngOnInit(): void {
     this.router.navigate(['/library']);
 
-    // this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
-    //   this.playlistData = playlist
-    //   this.playlistData = this.playlistData.items
-    // })
+    this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
+      this.playlistData = playlist
+      this.playlistData = this.playlistData.items
+    })
 
 
 
@@ -54,8 +54,8 @@ export class SideBarComponent implements OnInit {
   }
 
   goToLibrary() {
+    this.router.navigate(['/library']);
     this.libraryActive = !this.libraryActive;
-    console.log(this.libraryActive);
     setTimeout(() => {
       this.libraryActive = !this.libraryActive;
     }, 1000);

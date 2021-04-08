@@ -88,8 +88,12 @@ export class SpotifyService {
     })
   }
 
-  getPodcasts() {
-
+  getEpisodes() {
+    return this.http.get('https://api.spotify.com/v1/me/episodes', {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
   }
 }
 
