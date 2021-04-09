@@ -13,10 +13,10 @@ export class LibAlbumsComponent implements OnInit {
 
   ngOnInit() {
     
-    // this.spotifyServ.getSavedAlbums().subscribe((savedAlbums) => {
-    //   this.savedAlbumsData = savedAlbums
-    //   this.savedAlbumsData = this.savedAlbumsData.items
-    // });
+    this.spotifyServ.getSavedAlbums().subscribe((savedAlbums) => {
+      this.savedAlbumsData = savedAlbums
+      this.savedAlbumsData = this.savedAlbumsData.items
+    });
   }
 
 }

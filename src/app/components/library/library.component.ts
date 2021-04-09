@@ -14,5 +14,14 @@ export class LibraryComponent implements OnInit {
   ngOnInit(): void {
     this.router.navigate(['shows'], { relativeTo: this.route })
   }
+  toPodcast(){
+    this.router.navigate(['shows'], { relativeTo: this.route })
+  }
+  toAlbums(){
+    this.router.navigate(['albums'], { relativeTo: this.route })
+  }
+  toArtists(){
+    this.router.navigate(['artists'], { relativeTo: this.route })
+  }
 
 }

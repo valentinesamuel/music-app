@@ -1,1 +1,19 @@
 @use '../../../styles.scss';
+ul {
+  margin-top: 20px;
+  margin-left: 30px;
+  display: flex;
+
+  li {
+    list-style-type: none;
+    margin-right: 30px;
+    padding: 10px;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: styles.$dark-color;
+    }
+  }
+}
