@@ -1,0 +1,23 @@
+@use '../../../styles.scss';
+
+.now-playing {
+  .track-details {
+        display: flex;
+        align-items: center;
+    .image {
+      height: 50px;
+     width: 50px;
+     margin: 10px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    fa-icon{
+          margin-left: 20px;
+    }
+  }
+
+  
+}
