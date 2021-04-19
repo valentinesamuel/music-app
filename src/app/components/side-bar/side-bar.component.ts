@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../../services/spotify.service';
-import { faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+import { faPlusSquare, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  faHome = faHome;
-  faBookReader = faBookReader;
-  faSearch = faSearch;
-  faHeart = faHeart;
-  faPlusSquare = faPlusSquare;
+  faHome:IconDefinition = faHome;
+  faBookReader :IconDefinition= faBookReader;
+  faSearch:IconDefinition = faSearch;
+  faHeart :IconDefinition= faHeart;
+  faPlusSquare:IconDefinition = faPlusSquare;
   searchActive = true;
   homeActive = true;
   libraryActive = true;

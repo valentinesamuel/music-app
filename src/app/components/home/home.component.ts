@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SpotifyService } from '../../services/spotify.service';
-import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faPlay, IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 })
 export class HomeComponent implements OnInit {
 
-  faplay = faPlay
+  faplay : IconDefinition= faPlay
   categoriesData
   topArtistData
 
