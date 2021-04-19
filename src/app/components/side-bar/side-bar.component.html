@@ -41,7 +41,9 @@
 
     <div class="playlist-section">
       <ul class="playlist" *ngFor="let playlist of playlistData">
-        <li class="playlist-title">{{ playlist.name }}</li>
+        <li class="playlist-title">
+          <a [href]="playlist.href">{{ playlist.name }}</a>
+        </li>
       </ul>
     </div>
   </div>

@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.spotifyServ.browseCategories().subscribe((categories) => {
       this.categoriesData = categories;
-      this.categoriesData = this.categoriesData.categories.items
+      this.categoriesData = this.categoriesData.categories.items      
     });
 
     this.spotifyServ.getTopArtists().subscribe((topArtists) => {
