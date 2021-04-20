@@ -13,11 +13,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
-  faHome:IconDefinition = faHome;
-  faBookReader :IconDefinition= faBookReader;
-  faSearch:IconDefinition = faSearch;
-  faHeart :IconDefinition= faHeart;
-  faPlusSquare:IconDefinition = faPlusSquare;
+  faHome: IconDefinition = faHome;
+  faBookReader: IconDefinition = faBookReader;
+  faSearch: IconDefinition = faSearch;
+  faHeart: IconDefinition = faHeart;
+  faPlusSquare: IconDefinition = faPlusSquare;
   searchActive = true;
   homeActive = true;
   libraryActive = true;
@@ -39,7 +39,7 @@ export class SideBarComponent implements OnInit {
   goHome() {
     this.router.navigate(['/home']);
     this.homeActive = !this.homeActive;
-   
+
 
     setTimeout(() => {
       this.homeActive = !this.homeActive;
@@ -55,7 +55,7 @@ export class SideBarComponent implements OnInit {
   }
 
   goToLibrary() {
-    this.router.navigate(['/library']);
+    this.router.navigate(['/library', 'shows']);
     this.libraryActive = !this.libraryActive;
     setTimeout(() => {
       this.libraryActive = !this.libraryActive;
