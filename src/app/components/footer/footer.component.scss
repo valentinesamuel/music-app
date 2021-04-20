@@ -1,23 +1,38 @@
 @use '../../../styles.scss';
 
 .now-playing {
+  display: flex;
   .track-details {
-        display: flex;
-        align-items: center;
+    display: flex;
+    align-items: center;
     .image {
       height: 50px;
-     width: 50px;
-     margin: 10px;
+      width: 50px;
+      margin: 10px;
       img {
         height: 100%;
         width: 100%;
         object-fit: cover;
       }
     }
-    fa-icon{
-          margin-left: 20px;
+    fa-icon {
+      margin-left: 20px;
     }
   }
-
-  
+  .play-controls {
+    .controllers {
+      color: white;
+      .player{
+            font-size: 2rem;
+      }
+      fa-icon {
+        font-size: 1.3rem;
+        margin: 15px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+   
+  }
 }
