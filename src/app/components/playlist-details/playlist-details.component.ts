@@ -13,16 +13,16 @@ export class PlaylistDetailsComponent implements OnInit {
     private route: ActivatedRoute, private spotifyService: SpotifyService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(
-      (params) => {
-        this.playlistId = params.id
-        this.spotifyService.getSelectedPlaylists(this.playlistId).subscribe(
-          (details) => {
-            console.log(details);
-          }
-        )
-      }
-    );
+    // this.route.params.subscribe(
+    //   (params) => {
+    //     this.playlistId = params.id
+    //     this.spotifyService.getSelectedPlaylists('37i9dQZEVXcRy4kETfZp0D').subscribe(
+    //       (details) => {
+    //         console.log(details);
+    //       }
+    //     )
+    //   }
+    // );
 
      
     }
