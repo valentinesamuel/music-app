@@ -59,3 +59,26 @@
     color: styles.$white-color;
   }
 }
+
+.tracks-header {
+  color: styles.$light-color;
+  display: flex;
+  align-items: center;
+  padding: 0 20px 0 30px;
+  justify-content: space-between;
+  .number {
+    flex-basis: 5%;
+  }
+  .title {
+    flex-basis: 60%;
+  }
+  .album {
+    flex-basis: 15%;
+  }
+  .added {
+    flex-basis: 13%;
+  }
+  .clock {
+    flex-basis: 7%;
+  }
+}
