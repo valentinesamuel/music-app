@@ -24,7 +24,7 @@
       <fa-icon [icon]="faRandom"></fa-icon>
       <fa-icon [icon]="faBackward"></fa-icon>
       <fa-icon
-        class="player"
+        class="player-icon"
         [icon]="stateIcon"
         (click)="onPauseAndPlay()"
       ></fa-icon>
@@ -41,5 +41,10 @@
         (input)="rangeValue($event.target.value)"
       />
     </div>
+  </div>
+
+  <div class="volume">
+    <fa-icon [icon]="faVolumeUp"></fa-icon>
+    <input type="range" min="0" max="100" value="0" class="slider" />
   </div>
 </div>

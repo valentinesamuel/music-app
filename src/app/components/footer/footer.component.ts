@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHeart, faPlayCircle, faRandom, faRedo, faForward, faBackward, faPauseCircle, faPause, } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlayCircle, faRandom, faRedo, faForward, faBackward, faPauseCircle, faPause, faVolumeUp} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +8,7 @@ import { faHeart, faPlayCircle, faRandom, faRedo, faForward, faBackward, faPause
 })
 export class FooterComponent implements OnInit {
   status = true
+  faVolumeUp = faVolumeUp
   stateIcon = faPlayCircle;
   faHeart = faHeart;
   faPlayCircle = faPlayCircle;

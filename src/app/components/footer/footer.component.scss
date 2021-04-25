@@ -2,7 +2,11 @@
 
 .now-playing {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
   .track-details {
+     flex-basis:20%;
     display: flex;
     color: styles.$white-color;
     align-items: center;
@@ -16,9 +20,8 @@
         object-fit: cover;
       }
     }
-    .name{
-      
-      h5{
+    .name {
+      h5 {
         color: styles.$light-color;
       }
     }
@@ -28,19 +31,23 @@
   }
 
   .play-controls {
-    width: 900px;
+     flex-basis:55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .controllers {
       display: flex;
-      // justify-content: center;
+      justify-content: center;
       color: white;
       align-items: center;
-      .player {
+
+      .player-icon {
         font-size: 2rem;
       }
+
       fa-icon {
-        font-size: 1.3rem;
-        margin: 15px;
-        width: 100%;
+        margin-left: 5px;
+        margin-right: 25px;
         &:hover {
           cursor: pointer;
         }
@@ -48,12 +55,13 @@
     }
 
     .player {
-      width: 100%;
-
+      display: flex;
+      font-size: 1.3rem;
+      justify-content: center;
       .slider {
         -webkit-appearance: none; /* Override default CSS styles */
         appearance: none;
-        width: 100%; /* Full-width */
+        width: 80%; /* Full-width */
         height: 5px; /* Specified height */
         background: rgb(90, 90, 90); /* Grey background */
         outline: none; /* Remove outline */
@@ -79,5 +87,11 @@
         }
       }
     }
+  }
+
+  .volume{
+    display: flex;
+      flex-basis:15%;
+      justify-content: space-around;
   }
 }
