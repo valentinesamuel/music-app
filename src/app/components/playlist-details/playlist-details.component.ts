@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SpotifyService } from 'src/app/services/spotify.service';
 
 @Component({
   selector: 'app-playlist-details',
@@ -7,17 +8,24 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./playlist-details.component.scss']
 })
 export class PlaylistDetailsComponent implements OnInit {
-
+  playlistId
   constructor(private router: Router,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute, private spotifyService: SpotifyService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
       (params) => {
-        console.log(params);
-
+        this.playlistId = params.id
+        this.spotifyService.getSelectedPlaylists(this.playlistId).subscribe(
+          (details) => {
+            console.log(details);
+          }
+        )
       }
-    )
-  }
+    );
+
+     
+    }
+
 
 }

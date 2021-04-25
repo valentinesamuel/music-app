@@ -42,9 +42,9 @@
     <div class="playlist-section">
       <ul class="playlist" *ngFor="let playlist of playlistData">
         <li class="playlist-title">
-          <a [href]="playlist.href" (click)="goToPlaylist($event)">{{
+          <p [id]="playlist.id" (click)="goToPlaylist($event)">{{
             playlist.name
-          }}</a>
+          }}</p>
         </li>
       </ul>
     </div>

@@ -61,11 +61,7 @@ export class SideBarComponent implements OnInit {
   }
 
   goToPlaylist(e) {
-    console.log(e);
-    this.spotifyServ.getSelectedPlaylists(e.target.href).subscribe((play) => {
-      console.log(play);
-
-    })
+    this.router.navigate(['/playlist',e.target.id]);
   }
 
 }

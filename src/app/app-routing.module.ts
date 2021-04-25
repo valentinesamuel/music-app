@@ -19,7 +19,7 @@ const routes: Routes = [
       { path: 'episodes', component: LibEpisodesComponent },
     ]
   },
-  { path: 'api.spotify.com/v1/playlists/:id', component: PlaylistDetailsComponent },
+  { path: 'playlist/:id', component: PlaylistDetailsComponent },
 ];
 
 @NgModule({

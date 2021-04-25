@@ -97,8 +97,8 @@ export class SpotifyService {
     })
   }
 
-  getSelectedPlaylists(url) {
-    return this.http.get(url, {
+  getSelectedPlaylists(id) {
+    return this.http.get(`https://api.spotify.com/v1/playlists/${id}`, {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
       )
