@@ -16,6 +16,7 @@ import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.c
 import { LibShowsComponent } from './components/library/lib-shows/lib-shows.component';
 import { LibEpisodesComponent } from './components/library/lib-episodes/lib-episodes.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PlaylistDetailsComponent } from './components/playlist-details/playlist-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './components/footer/footer.component';
     LibAlbumsComponent,
     LibShowsComponent,
     LibEpisodesComponent,
-    FooterComponent
+    FooterComponent,
+    PlaylistDetailsComponent
   ],
   imports: [
     BrowserModule,
