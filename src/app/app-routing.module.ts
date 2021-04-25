@@ -6,6 +6,7 @@ import { LibraryComponent } from './components/library/library.component';
 import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
 import { LibShowsComponent } from './components/library/lib-shows/lib-shows.component';
 import { LibEpisodesComponent } from './components/library/lib-episodes/lib-episodes.component';
+import { PlaylistDetailsComponent } from './components/playlist-details/playlist-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
       { path: 'shows', component: LibShowsComponent },
       { path: 'episodes', component: LibEpisodesComponent },
     ]
-  }
+  },
+  { path: 'api.spotify.com/v1/playlists/:id', component: PlaylistDetailsComponent },
 ];
 
 @NgModule({

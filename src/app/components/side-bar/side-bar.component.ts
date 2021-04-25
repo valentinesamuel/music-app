@@ -22,6 +22,7 @@ export class SideBarComponent implements OnInit {
   homeActive = true;
   libraryActive = true;
   playlistData
+  id
 
   constructor(private spotifyServ: SpotifyService, private router: Router) { }
 
@@ -32,9 +33,6 @@ export class SideBarComponent implements OnInit {
       this.playlistData = playlist
       this.playlistData = this.playlistData.items
     })
-
-
-
   }
   goHome() {
     this.router.navigate(['/home']);
@@ -61,4 +59,13 @@ export class SideBarComponent implements OnInit {
       this.libraryActive = !this.libraryActive;
     }, 1000);
   }
+
+  goToPlaylist(e) {
+    console.log(e);
+    this.spotifyServ.getSelectedPlaylists(e.target.href).subscribe((play) => {
+      console.log(play);
+
+    })
+  }
+
 }

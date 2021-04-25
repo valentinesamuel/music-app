@@ -11,6 +11,7 @@ export class SpotifyService {
   redirectUri = 'http://localhost:4200/';
   clientId = 'cde2240dafeb489e8b0cddabdf3a8844';
   finalUrl: any;
+  requestEndPoint = 'https://api.spotify.com/v1/me/'
 
   requestToken: any;
   scopes = [
@@ -96,8 +97,12 @@ export class SpotifyService {
     })
   }
 
-  getSelectedPlaylists() {
-   
+  getSelectedPlaylists(url) {
+    return this.http.get(url, {
+      headers: new HttpHeaders(
+        { 'Authorization': `Bearer ${this.requestToken}` }
+      )
+    })
   }
 }
 
