@@ -1,0 +1,61 @@
+@use '../../../styles.scss';
+
+.header {
+  padding: 30px 30px 70px 30px;
+  display: flex;
+  background-color: green;
+  align-items: flex-end;
+  .playlist-image {
+    height: 250px;
+    width: 250px;
+    margin-right: 24px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .about {
+    .type {
+      font-size: 0.8rem;
+      color: styles.$white-color;
+    }
+    .title {
+      font-size: 6rem;
+      line-height: 7rem;
+      color: styles.$white-color;
+    }
+    .description {
+      color: styles.$light-color;
+      line-height: 2rem;
+    }
+    .stats {
+      color: styles.$light-color;
+      b {
+        color: styles.$white-color;
+      }
+    }
+  }
+}
+
+.like-play {
+  display: flex;
+  margin-left: 30px;
+  margin-top: 25px;
+  align-items: center;
+  .play {
+    font-size: 4rem;
+    color: styles.$green-color;
+    margin-right: 25px;
+  }
+  .like {
+    font-size: 2rem;
+    margin-right: 25px;
+    color: styles.$white-color;
+  }
+  .dot {
+    font-size: 1.3rem;
+    color: styles.$white-color;
+  }
+}

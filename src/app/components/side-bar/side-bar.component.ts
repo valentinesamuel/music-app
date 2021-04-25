@@ -29,11 +29,12 @@ export class SideBarComponent implements OnInit {
   ngOnInit(): void {
     //This should be uncommented  // this.router.navigate(['/home']);
     //This is for the main time to allow me develop the playlist page in peace
-    this.spotifyServ.getSelectedPlaylists('37i9dQZEVXcRy4kETfZp0D').subscribe(
-      (details) => {
-        console.log(details);
-      }
-    )
+    this.router.navigate(['/playlist', '37i9dQZEVXcRy4kETfZp0D']);
+    // this.spotifyServ.getSelectedPlaylists('37i9dQZEVXcRy4kETfZp0D').subscribe(
+    //   (details) => {
+    //     console.log(details);
+    //   }
+    // )
 
     this.spotifyServ.getUserPlaylist().subscribe((playlist) => {
       this.playlistData = playlist

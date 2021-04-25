@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SpotifyService } from 'src/app/services/spotify.service';
+import { faPlayCircle, faHeart, faEllipsisH } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-playlist-details',
@@ -9,6 +10,11 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class PlaylistDetailsComponent implements OnInit {
   playlistId
+
+  faPlayCircle = faPlayCircle
+  faHeart = faHeart
+  faEllipsisH= faEllipsisH
+
   constructor(private router: Router,
     private route: ActivatedRoute, private spotifyService: SpotifyService) { }
 
