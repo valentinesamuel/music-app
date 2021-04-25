@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHeart,faPlayCircle, faRandom, faRedo, faForward, faBackward, faPauseCircle, faPause } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faPlayCircle, faRandom, faRedo, faForward, faBackward, faPauseCircle, faPause, } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -16,6 +16,7 @@ export class FooterComponent implements OnInit {
   faForward = faForward;
   faPauseCircle = faPauseCircle;
   faBackward = faBackward;
+  value
   constructor() { }
 
   ngOnInit(): void {
@@ -24,10 +25,15 @@ export class FooterComponent implements OnInit {
   onPauseAndPlay() {
     this.status = !this.status;
     if (this.status) {
-        this.stateIcon = faPlayCircle;
+      this.stateIcon = faPlayCircle;
     } else {
       this.stateIcon = faPauseCircle;
     }
-    
+
+  }
+
+  rangeValue(e) {
+    console.log(e);
+
   }
 }

@@ -23,17 +23,23 @@
     <div class="controllers">
       <fa-icon [icon]="faRandom"></fa-icon>
       <fa-icon [icon]="faBackward"></fa-icon>
-      <fa-icon class="player" [icon]="stateIcon" (click)="onPauseAndPlay()"></fa-icon>
+      <fa-icon
+        class="player"
+        [icon]="stateIcon"
+        (click)="onPauseAndPlay()"
+      ></fa-icon>
       <fa-icon [icon]="faForward"></fa-icon>
       <fa-icon [icon]="faRedo"></fa-icon>
     </div>
     <div class="player">
-      <!-- <audio controls controlsList="nodownload">
-        <source
-          src="https://naijaloaded.store/wp-content/uploads/2020/12/Rexxie-Ft.-Mohbad-KPK-Ko-Por-Keh.mp3"
-          type="audio/mp3"
-        />
-      </audio> -->
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="0"
+        class="slider"
+        (input)="rangeValue($event.target.value)"
+      />
     </div>
   </div>
 </div>
