@@ -16,7 +16,6 @@ export class FooterComponent implements OnInit {
   faForward = faForward;
   faPauseCircle = faPauseCircle;
   faBackward = faBackward;
-  value
   constructor() { }
 
   ngOnInit(): void {

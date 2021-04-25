@@ -4,6 +4,7 @@
   display: flex;
   .track-details {
     display: flex;
+    color: styles.$white-color;
     align-items: center;
     .image {
       height: 50px;
@@ -15,19 +16,31 @@
         object-fit: cover;
       }
     }
+    .name{
+      
+      h5{
+        color: styles.$light-color;
+      }
+    }
     fa-icon {
       margin-left: 20px;
     }
   }
+
   .play-controls {
+    width: 900px;
     .controllers {
+      display: flex;
+      // justify-content: center;
       color: white;
+      align-items: center;
       .player {
         font-size: 2rem;
       }
       fa-icon {
         font-size: 1.3rem;
         margin: 15px;
+        width: 100%;
         &:hover {
           cursor: pointer;
         }
@@ -62,7 +75,6 @@
         .slider::-moz-range-thumb {
           width: 15px; /* Set a specific slider handle width */
           height: 15px; /* Slider handle height */
-          background: #4caf50; /* Green background */
           cursor: pointer; /* Cursor on hover */
         }
       }
