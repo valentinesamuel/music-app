@@ -95,5 +95,9 @@ export class SpotifyService {
       )
     })
   }
+
+  getSelectedPlaylists() {
+   
+  }
 }
 
