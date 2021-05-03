@@ -13,8 +13,13 @@ import { faPlayCircle, faHeart, faEllipsisH, faClock } from '@fortawesome/free-s
 
 export class PlaylistDetailsComponent implements OnInit {
   playlistId
-  playlistDetailData
+  description
+  image
+  name
+  type
   tracks
+  followers
+  owner
   faPlayCircle = faPlayCircle
   faHeart = faHeart
   faEllipsisH = faEllipsisH
@@ -28,12 +33,20 @@ export class PlaylistDetailsComponent implements OnInit {
     this.route.params.subscribe(
       (params) => {
         this.playlistId = params.id
-        this.spotifyService.getSelectedPlaylists('37i9dQZEVXcRy4kETfZp0D').subscribe(
+        this.spotifyService.getSelectedPlaylists(this.playlistId).subscribe(
           (details) => {
-            this.playlistDetailData = details;
+            this.owner = details.owner
+            this.followers= details.followers,
+
+
+              this.description = details.description;
+            this.type = details.type
+            this.name = details.name
+            this.image = details.images
+
+
             this.tracks = details.tracks
             this.tracks = this.tracks.items
-            console.log(this.tracks);
 
           }
         )

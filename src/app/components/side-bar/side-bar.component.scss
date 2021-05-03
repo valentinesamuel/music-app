@@ -101,15 +101,12 @@
 
 .wrapper {
   display: grid;
-
   width: 100%;
-
   overflow: hidden;
   grid-template-areas:
     "sidebar main"
     "player player";
   grid-template-columns: minmax(230px, 230px) auto;
-  // grid-template-rows: 85vh 15vh;
   grid-template-rows: 90vh 10vh;
 }
 

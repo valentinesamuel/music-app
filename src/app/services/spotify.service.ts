@@ -7,7 +7,9 @@ export interface PlaylistData {
   images,
   name,
   tracks,
-  type
+  type,
+  owner,
+  followers,
 }
 @Injectable({
   providedIn: 'root'

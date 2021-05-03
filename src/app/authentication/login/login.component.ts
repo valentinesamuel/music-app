@@ -8,7 +8,6 @@ import { SpotifyService } from '../../services/spotify.service';
 })
 export class LoginComponent implements OnInit {
   address: any
-  token: any
   
   ngOnInit() {
    this.address = this.spotify.authorize();
