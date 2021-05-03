@@ -5,7 +5,6 @@ import { LibArtistsComponent } from './components/library/lib-artists/lib-artist
 import { LibraryComponent } from './components/library/library.component';
 import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
 import { LibShowsComponent } from './components/library/lib-shows/lib-shows.component';
-import { LibEpisodesComponent } from './components/library/lib-episodes/lib-episodes.component';
 import { PlaylistDetailsComponent } from './components/playlist-details/playlist-details.component';
 
 const routes: Routes = [
@@ -16,7 +15,6 @@ const routes: Routes = [
       { path: 'artists', component: LibArtistsComponent },
       { path: 'albums', component: LibAlbumsComponent },
       { path: 'shows', component: LibShowsComponent },
-      { path: 'episodes', component: LibEpisodesComponent },
     ]
   },
   { path: 'playlist/:id', component: PlaylistDetailsComponent },

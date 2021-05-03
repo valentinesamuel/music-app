@@ -14,7 +14,6 @@ import { StringShortnerPipe } from './pipes/string-shortner.pipe';
 import { LibArtistsComponent } from './components/library/lib-artists/lib-artists.component';
 import { LibAlbumsComponent } from './components/library/lib-albums/lib-albums.component';
 import { LibShowsComponent } from './components/library/lib-shows/lib-shows.component';
-import { LibEpisodesComponent } from './components/library/lib-episodes/lib-episodes.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PlaylistDetailsComponent } from './components/playlist-details/playlist-details.component';
 
@@ -30,7 +29,6 @@ import { PlaylistDetailsComponent } from './components/playlist-details/playlist
     LibArtistsComponent,
     LibAlbumsComponent,
     LibShowsComponent,
-    LibEpisodesComponent,
     FooterComponent,
     PlaylistDetailsComponent
   ],
