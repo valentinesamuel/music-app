@@ -83,47 +83,48 @@
   }
 }
 
-.tracks{
+.tracks {
+  background-color: gray;
   margin-top: 10px;
   color: white;
   padding: 0 20px 0 30px;
   justify-content: space-between;
-display: flex;
-align-items: center;
-.number{
-     flex-basis: 5%;
-}
-  .title{
-       flex-basis: 60%;
+  display: flex;
+  align-items: center;
+  .number {
+    flex-basis: 5%;
+  }
+  .title {
+    flex-basis: 60%;
     display: flex;
-    img{
+    img {
       height: 40px;
       width: 40px;
       margin-right: 20px;
     }
-    .title-detail{
+    .title-detail {
       display: flex;
       flex-direction: column;
-      .artists{
+      .artists {
         margin-top: 3px;
         color: styles.$light-color;
         font-size: 14px;
       }
-      .song-name{
+      .song-name {
         color: styles.$white-color;
       }
     }
-}
+  }
   .album {
     flex-basis: 15%;
     color: styles.$light-color;
   }
   .time {
     flex-basis: 13%;
-     color: styles.$light-color;
+    color: styles.$light-color;
   }
   .duration {
     flex-basis: 7%;
-     color: styles.$light-color;
+    color: styles.$light-color;
   }
 }

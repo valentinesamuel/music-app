@@ -1,49 +1,49 @@
-<section class="header">
-  <div class="playlist-image">
-    <img
-      src="https://images.pexels.com/photos/1809547/pexels-photo-1809547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="playlist-image"
-    />
-  </div>
-  <div class="about">
-    <p class="type">PLAYLIST</p>
-    <h1 class="title">the bootleg goat</h1>
-    <p class="description">
-      Sad lofi hip hop& slow beats with emotional vocals(updated weekly)
-    </p>
-    <p class="stats">
-      <b>thebootlegboy</b> &#10045; 133,224 likes &#10045; 150songs, about 6hr
-    </p>
-  </div>
-</section>
-<div class="like-play">
-  <fa-icon class="play" [icon]="faPlayCircle"></fa-icon>
-  <fa-icon class="like" [icon]="faHeart"></fa-icon>
-  <fa-icon class="dot" [icon]="faEllipsisH"></fa-icon>
-</div>
-<div class="tracks-header">
-  <p class="number"># </p>
-  <p class="title">TITLE</p>
-  <p class="album">ALBUM</p>
-  <p class="added">DATE ADDED</p>
-  <fa-icon class="clock" [icon]="faClock"></fa-icon>
-</div>
-
-<div class="tracks">
- <p class="number">
-  1
- </p>
-  <div class="title">
-    <img
-      src="https://images.pexels.com/photos/1809547/pexels-photo-1809547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-      alt="playlist-image"
-    />
-    <div class="title-detail">
-      <p class="song-name">Make It Home</p>
-      <p class="artists">Roundrobin, Thomas Reid</p>
+<div class="container">
+  <section class="header">
+    <div class="playlist-image">
+      <img
+        src="https://images.pexels.com/photos/1809547/pexels-photo-1809547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="playlist-image"
+      />
     </div>
+    <div class="about">
+      <p class="type">PLAYLIST</p>
+      <h1 class="title">the bootleg goat</h1>
+      <p class="description">
+        Sad lofi hip hop& slow beats with emotional vocals(updated weekly)
+      </p>
+      <p class="stats">
+        <b>thebootlegboy</b> &#10045; 133,224 likes &#10045; 150songs, about 6hr
+      </p>
+    </div>
+  </section>
+  <div class="like-play">
+    <fa-icon class="play" [icon]="faPlayCircle"></fa-icon>
+    <fa-icon class="like" [icon]="faHeart"></fa-icon>
+    <fa-icon class="dot" [icon]="faEllipsisH"></fa-icon>
   </div>
-  <p class="album">I don't care anymore</p>
-  <p class="time">3 days ago</p>
-  <p class="duration">3:03</p>
+  <div class="tracks-header">
+    <p class="number">#</p>
+    <p class="title">TITLE</p>
+    <p class="album">ALBUM</p>
+    <p class="added">DATE ADDED</p>
+    <fa-icon class="clock" [icon]="faClock"></fa-icon>
+  </div>
+
+  <div class="tracks" *ngFor="let track of tracks; let i = index">
+    <p class="number">{{i}}</p>
+    <div class="title">
+      <img
+        src="https://images.pexels.com/photos/1809547/pexels-photo-1809547.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt="playlist-image"
+      />
+      <div class="title-detail">
+        <p class="song-name">{{ track.track.name }}</p>
+        <p class="artists"></p>
+      </div>
+    </div>
+    <p class="album">I don't care anymore</p>
+    <p class="time">3 days ago</p>
+    <p class="duration">3:03</p>
+  </div>
 </div>

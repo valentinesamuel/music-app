@@ -2,7 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-
+export interface PlaylistData {
+  description,
+  images,
+  name,
+  tracks,
+  type
+}
 @Injectable({
   providedIn: 'root'
 })
@@ -98,7 +104,7 @@ export class SpotifyService {
   }
 
   getSelectedPlaylists(id) {
-    return this.http.get(`https://api.spotify.com/v1/playlists/${id}`, {
+    return this.http.get<PlaylistData>(`https://api.spotify.com/v1/playlists/${id}`, {
       headers: new HttpHeaders(
         { 'Authorization': `Bearer ${this.requestToken}` }
       )
