@@ -16,7 +16,7 @@ export interface PlaylistData {
 })
 export class SpotifyService {
   authEndpoint = 'https://accounts.spotify.com/authorize';
-  redirectUri = 'http://localhost:4200/';
+  redirectUri = 'https://ng-spotify.netlify.app/';
   clientId = 'cde2240dafeb489e8b0cddabdf3a8844';
   finalUrl: any;
   requestEndPoint = 'https://api.spotify.com/v1/me/'
