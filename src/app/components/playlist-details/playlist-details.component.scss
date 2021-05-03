@@ -111,12 +111,20 @@
 
       .song-name {
         color: styles.$white-color;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
       }
     }
   }
   .album {
     flex-basis: 15%;
     color: styles.$light-color;
+      display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
   }
   .time {
     flex-basis: 13%;
