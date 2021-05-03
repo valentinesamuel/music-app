@@ -16,7 +16,7 @@ The home page contains the sidevar, the footer and the main part. These include:
  * Categories
 
 ## Website URL
-* **netlify.app
+https://ng-spotify.netlify.app/
 
 
 Managing development and publishing is not an easy task.
