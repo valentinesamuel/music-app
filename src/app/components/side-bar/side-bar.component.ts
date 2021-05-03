@@ -22,7 +22,7 @@ export class SideBarComponent implements OnInit {
   homeActive = true;
   libraryActive = true;
   playlistData
-  id
+  
 
   constructor(private spotifyServ: SpotifyService, private router: Router) { }
 
