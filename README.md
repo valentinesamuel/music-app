@@ -1,7 +1,7 @@
 # ng-Spotify-Clone
 
 ## Project Purpose
-This project was built in order to test my http request skills in abular and also challenge myself on layout using scss. How ever, this spotify cone does not have a play functionality because i do not have a premium spotify account. After checking spotify's api endpoint. I found out that some endpoints cannot be accessed my free users of spotify, so i could not test the build with my account. Nevertheless. I will still update the UI and host it. Then i would continue to maintain the code and refactor the UI.
+This project was built in order to test my http request skills in angular and also challenge myself on layout using scss. However, this spotify cone does not have a play functionality because i do not have a premium spotify account. After checking spotify's api endpoint. I found out that some endpoints cannot be accessed by free users of spotify, so i could not test the build with my account. Nevertheless. I will still update the UI and host it. Then i would continue to maintain the code and refactor the UI.
 
 
 ## Contributors
@@ -19,7 +19,7 @@ The home page contains the sidevar, the footer and the main part. These include:
 https://ng-spotify.netlify.app/
 
 
-Managing development and publishing is not an easy task.
+## Note: Anyone is welcome to clone and make PRs
 
 ## Additional Challenges
 
